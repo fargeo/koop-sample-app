@@ -5,10 +5,12 @@ const koop = new Koop(config)
 // providers
 const github = require('@koopjs/provider-github')
 const craigslist = require('koop-provider-craigslist')
+const provider = require('./salinas')
 
 // register koop providers
 koop.register(github)
 koop.register(craigslist)
+koop.register(provider);
 
 // This is how you implement additional arbitrary routes on the Koop server
 koop.server.get('/', function (req, res) {
