@@ -1,0 +1,12 @@
+{
+    "archesURL": "http://localhost:8000",
+    "koopOutputVectorTiles": {
+        "geojsonVT": {
+            "maxZoom": 24
+        }
+    },
+    "googlesheets": {
+        "auth": ""
+    },
+    "ghtoken": ""
+}

@@ -5,7 +5,7 @@ const koop = new Koop(config)
 // providers
 const github = require('@koopjs/provider-github')
 const craigslist = require('koop-provider-craigslist')
-const provider = require('./salinas')
+const provider = require('./arches')
 
 // register koop providers
 koop.register(github)
