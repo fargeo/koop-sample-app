@@ -49,7 +49,7 @@ Model.prototype.getData = function(req, callback) {
         }
     }
     
-    request('https://arcade.lincoln.gov.uk/search/resources?typeFilter=%5B%7B"graphid"%3A"e4b3562b-343a-11e8-b509-dca90488358a"%2C"name"%3A"Heritage%20Assets"%2C"inverted"%3Afalse%7D%5D&no_filters=false&limit=1000&page=1', (err, res, body) => {
+    request('https://arcade.lincoln.gov.uk/search/resources?typeFilter=%5B%7B"graphid"%3A"1c86516e-2c5a-11e8-89e4-0242ac120005"%2C"name"%3A"Heritage%20Areas"%2C"inverted"%3Afalse%7D%5D&no_filters=false&limit=1000&page=1', (err, res, body) => {
         if (err) return callback(err)
         
         const geojson = translate(body, geometryType)
