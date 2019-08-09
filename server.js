@@ -2,14 +2,17 @@ const config = require('config')
 const Koop = require('koop')
 const koop = new Koop(config)
 
+const tile = require('@koopjs/output-vector-tiles')
+const geojson = require("koop-output-geojson");
+
+// outputs
+koop.register(geojson);
+koop.register(tile);
+
 // providers
-const github = require('@koopjs/provider-github')
-const craigslist = require('koop-provider-craigslist')
 const provider = require('./arches')
 
 // register koop providers
-koop.register(github)
-koop.register(craigslist)
 koop.register(provider);
 
 // This is how you implement additional arbitrary routes on the Koop server
@@ -18,8 +21,7 @@ koop.server.get('/', function (req, res) {
 Welcome to Koop!
 
 Installed Providers:
-Github
-Craigslist
+Arches
 
 `)
 })

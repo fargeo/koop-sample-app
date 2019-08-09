@@ -49,12 +49,12 @@ Model.prototype.getData = function(req, callback) {
         }
     }
     
-    request('http://qa.archesproject.org/search/resources?tiles=true&mobiledownload=true&resourcecount=10000&paging-filter=1', (err, res, body) => {
+    request('https://arcade.lincoln.gov.uk/search/resources?typeFilter=%5B%7B"graphid"%3A"e4b3562b-343a-11e8-b509-dca90488358a"%2C"name"%3A"Heritage%20Assets"%2C"inverted"%3Afalse%7D%5D&no_filters=false&limit=1000&page=1', (err, res, body) => {
         if (err) return callback(err)
         
         const geojson = translate(body, geometryType)
 
-        geojson.ttl = 30;
+        geojson.ttl = 10000;
 
         geojson.metadata = {
             title: 'Koop Arches Provider',

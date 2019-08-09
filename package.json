@@ -7,9 +7,11 @@
     "url": "https://github.com/koopjs/koop-sample-app/issues"
   },
   "dependencies": {
+    "@koopjs/output-vector-tiles": "^2.1.0",
     "@koopjs/provider-github": "^3.0.0",
     "config": "^3.0.1",
     "koop": "^3.10.0",
+    "koop-output-geojson": "^1.1.1",
     "koop-provider-craigslist": "^2.0.0"
   },
   "devDependencies": {
