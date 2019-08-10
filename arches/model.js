@@ -83,6 +83,11 @@ function translate(input, geometryType) {
                     feature.properties.id = i;
                     feature.properties.displayname = hit._source.displayname;
                     feature.properties.displaydescription = hit._source.displaydescription;
+                    feature.properties._featureid = hit._source.resourceinstanceid;
+                    feature.properties.feature_info_content = `
+                        <h3>${feature.properties.displayname}</h3>
+                        <div>${feature.properties.displaydescription}</div>
+                    `
                     feature.properties.graph_id = hit._source.graph_id;
                     feature.properties.geometryType = geometryType;
                     feature.properties.areaType = areaType;
